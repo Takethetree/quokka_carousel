@@ -19,16 +19,29 @@
 		current = items[counter];
 		current.classList.add("current");
 	}
+
 	previous.addEventListener("click", () => scroll(-1));
 	next.addEventListener("click", () => scroll(1));
 	scroll(0);
 
 	let dots = Array.from(d.querySelectorAll(".dot"));
-	dots.forEach(dot.addEventListener("click", () => {
-		// let currentDot = dots.indexOf(dot);
-		// console.log(currentDot);
-		console.log("hello");
+	dots.forEach((dot, i) => dot.addEventListener("click", () => {
+		// console.log(i);
+		// console.log(dots.indexOf(dot));
+		current.classList.remove("current");
+		counter = i;
+		current = items[counter];
+		current.classList.add("current");
+
 	}))
+
+
+
+	// dots.forEach(dots.addEventListener("click", () => {
+	// 	// let currentDot = dots.indexOf(dot);
+	// 	// console.log(currentDot);
+	// 	console.log("hello");
+	// }))
 
 
 	// query selector to get the .dots

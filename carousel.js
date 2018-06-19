@@ -35,6 +35,11 @@
 	next.addEventListener("click", () => scroll(1));
 	scroll(0);
 
+	// let automatic = () => window.setTimeout(scroll(1), 1000);
+	// automatic();
+
+	setInterval(function(){ scroll(1); }, 6000);
+
 	dots.forEach((dot, i) => dot.addEventListener("click", () => {
 		current.classList.remove("current");
 		counter = i;
@@ -48,8 +53,6 @@
 
 
 	}))
-
-
 
 	// dots.forEach(dots.addEventListener("click", () => {
 	// 	// let currentDot = dots.indexOf(dot);

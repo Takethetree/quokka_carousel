@@ -1,4 +1,8 @@
 
+/*----------Body----------*/
+
+body {
+}
 
 /*----------Header----------*/
 
@@ -39,15 +43,27 @@
 	list-style:none;
 	display: block;
 	border: 1px solid black;
+	position: absolute;
+	bottom: 250px;
+
 }
 
 .active li {
 	position: absolute;
 	bottom: 250px;
+	opacity: 0.4;
+	-webkit-transition: opacity .5s ease-in;
+	-moz-transition: opacity .5s ease-in;
+	-ms-transition: opacity .5s ease-in;
+	-o-transition: opacity .5s ease-in;
+	transition: opacity .5s ease-in;
 }
 
 .active li.current {
 	bottom: -250px;
+	opacity: 1;
+
+
 }
 
 
@@ -65,6 +81,8 @@
 /*----------Forward And Back Buttons----------*/
 
 .buttons {
+	display: flex;
+
 }
 
 .left-button {

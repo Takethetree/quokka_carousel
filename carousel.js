@@ -6,7 +6,13 @@
 	let counter = 0;
 	let amount = items.length;
 	let current = items[0];
+	let dots = Array.from(d.querySelectorAll(".dot"));
+	let dot = d.querySelector(".dot");
+	let currentDot = dots[0];
+
 	container.classList.add("active");
+	dot.classList.add("selected");
+
 	let scroll = direction => {
 		current.classList.remove("current");
 		counter = counter + direction;
@@ -18,20 +24,28 @@
 		}
 		current = items[counter];
 		current.classList.add("current");
+		currentDot = dots[counter];
+		dots.forEach((dot, i) => {
+			dot.classList.remove("selected");
+		})
+		currentDot.classList.add("selected");
 	}
 
 	previous.addEventListener("click", () => scroll(-1));
 	next.addEventListener("click", () => scroll(1));
 	scroll(0);
 
-	let dots = Array.from(d.querySelectorAll(".dot"));
 	dots.forEach((dot, i) => dot.addEventListener("click", () => {
-		// console.log(i);
-		// console.log(dots.indexOf(dot));
 		current.classList.remove("current");
 		counter = i;
 		current = items[counter];
 		current.classList.add("current");
+
+		dots.forEach((dot, i) => {
+			dot.classList.remove("selected");
+		})
+		dot.classList.add("selected");
+
 
 	}))
 
@@ -48,5 +62,7 @@
 	// convert to an array
 	// iterate over these adding a click handler that does something with the index number of each dot
 	// use current / current classList lines!
+
+	// if 
 
 })(document);

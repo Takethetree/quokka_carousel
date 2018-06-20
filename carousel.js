@@ -1,8 +1,8 @@
 (d => {
 	let container = d.querySelector(".carousel-container");
-	let items = container.querySelectorAll(".carousel-list-item");
-	let previous = container.querySelector(".left-button");
-	let next = container.querySelector(".right-button");
+	let items = container.querySelectorAll(".carousel-list_item");
+	let previous = container.querySelector(".button--left");
+	let next = container.querySelector(".button--right");
 	let counter = 0;
 	let amount = items.length;
 	let current = items[0];

@@ -2,6 +2,10 @@
 /*----------Body----------*/
 
 body {
+	/*background: linear-gradient(to left, white, rgb(212, 229, 243), rgb(126, 186, 220));*/
+	/*background: linear-gradient(to left, white, rgb(253, 236, 246), rgb(126, 186, 220));*/
+/*	background: linear-gradient(to left, white, rgb(253, 236, 246), rgb(212, 229, 243));*/
+/*	background: linear-gradient(white, rgb(212, 229, 243));*/
 }
 
 /*----------Header----------*/
@@ -9,11 +13,21 @@ body {
 .header {
 	display: flex;
 	justify-content: center;
+/*	background-image: url('../images/grass.jpeg');
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;*/
 }
 
 .header-text {
-	font-size: 2.5em;
+	font-size: 3em;
 	font-family: 'Swanky and Moo Moo', cursive;
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+/*	background: linear-gradient(white, rgb(212, 229, 243));
+	padding-left: .5em;
+	padding-right: 1em;
+	border-radius: 5em;
+/*	box-shadow: -4px 6px rgb(205, 205, 205);*/
 }
 
 /*----------Carousel Container----------*/
@@ -37,7 +51,7 @@ body {
 
 }
 
-.carousel-list-item {
+.carousel-list_item {
 	width: 24%;
 	height: 250px;
 	list-style:none;
@@ -85,41 +99,50 @@ body {
 
 .buttons {
 	display: flex;
+	/*position: relative;*/
 
 }
 
-.left-button {
+.button-image {
+	position: absolute;
+	padding: 60px;
+	background-image: url('../images/grass.jpeg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.6;
+}
+
+.button-image--left {
+	margin-top: 7em;
+	left: 17%;
+}
+
+.button-image--right {
+	margin-top: 7em;
+	right: 17%;
+}
+
+.button {
 	display: inline-block;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0.5em 1em 0.5em 1em;
+	border: 1px solid black;
+	border-radius: .5em;
+	background-color: rgb(255, 232, 231);
+	top: 250px;
+	outline: none;
+	box-shadow: -4px 6px rgb(205, 205, 205);
+}
+
+.button--left {
 	left: 20%;
-	padding: 0.5em 1em 0.5em 1em;
-	border: 1px solid black;
-	border-radius: .5em;
-	background-color: rgb(255, 232, 231);
-	top: 250px;
-	outline: none;
-	box-shadow: -4px 6px rgb(205, 205, 205);
-/*	left: 0;
-	right: 0;*/
 }
 
-.right-button {
-	display: inline-block;
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
+.button--right {
 	right: 20%;
-	padding: 0.5em 1em 0.5em 1em;
-	border: 1px solid black;
-	border-radius: .5em;
-	background-color: rgb(255, 232, 231);
-	top: 250px;
-	outline: none;
-	box-shadow: -4px 6px rgb(205, 205, 205);
-/*	left: 0;*/
-/*	right: 10%;*/
 }
 
 .buttons a {

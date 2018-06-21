@@ -32,7 +32,9 @@
 	}
 
 	previous.addEventListener("click", () => scroll(-1));
+	previous.addEventListener("touchstart", () => scroll(-1));
 	next.addEventListener("click", () => scroll(1));
+	next.addEventListener("touchstart", () => scroll(1));
 	scroll(0);
 
 	// let automatic = () => window.setTimeout(scroll(1), 1000);

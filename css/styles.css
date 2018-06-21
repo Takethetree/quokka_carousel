@@ -35,6 +35,7 @@ body {
 
 .carousel-container {
 	position: relative;
+
 /*	display: flex;*/
 
 }
@@ -53,22 +54,22 @@ body {
 }
 
 .carousel-list_item {
-	width: 24%;
-	height: 250px;
-/*	height: 1500%;*/
+	width: 30%;
+	height: 300px;
+	/*height: 1500%;*/
 	list-style:none;
 	display: block;
 	border: 1px solid black;
 	position: absolute;
 	bottom: 250px;
-	left: 37.5%;
-	right: 37.5%;
+	left: 35%;
+	right: 35%;
 
 }
 
 .active li {
 	position: absolute;
-	bottom: 250px;
+	bottom: 300px;
 	opacity: 0.4;
 	-webkit-transition: opacity .5s ease-in;
 	-moz-transition: opacity .5s ease-in;
@@ -79,7 +80,7 @@ body {
 }
 
 .active li.current {
-	bottom: -250px;
+	bottom: -300px;
 	opacity: 1;
 
 
@@ -197,10 +198,26 @@ body {
 	.header-text {
 		font-size: 1.75em;
 	}
+
+	.carousel-list_item {
+		width: 60%;
+		left: 20%;
+		right: 20%;
+
+	}
+
+	.button {
+		top: 350px;
+	}
+
+	.inner-dot-container {
+		top: 400px;
+	}
+
 }
 
 /*Tablet (ish)*/
-@media only screen and (min-width: 321px) and (max-width: 600px) {
+@media only screen and (min-width: 321px) and (max-width: 548px) {
 	.button-image {
 		background-image: none;
 	}
@@ -208,50 +225,89 @@ body {
 	.header-text {
 		font-size: 2em;
 	}
+
+	.carousel-list_item {
+		width: 60%;
+		left: 20%;
+		right: 20%;
+
+	}
+
+	.button {
+		top: 350px;
+	}
+
+	.inner-dot-container {
+		top: 400px;
+	}
+
 }
 
-@media only screen and (min-width: 601px) and (max-width: 633px) {
+@media only screen and (min-width: 549px) and (max-width: 633px) {
 	.button-image {
-		opacity: 0.05;
+		background-image: none;
 	}
 
 	.header-text {
 		font-size: 2.25em;
 	}
+
+	.carousel-list_item {
+		width: 60%;
+		left: 20%;
+		right: 20%;
+
+	}
+
+	.button {
+		top: 350px;
+	}
+
+	.inner-dot-container {
+		top: 400px;
+	}
+
 }
 
 @media only screen and (min-width: 634px) and (max-width: 664px) {
 	.button-image {
-		opacity: 0.1;
+		background-image: none;
 	}
 
 	.header-text {
 		font-size: 2.5em;
 	}
+
 }
 
 @media only screen and (min-width: 665px) and (max-width: 727px) {
 	.button-image {
-		opacity: 0.2;
+		opacity: 0.1;
 	}
 
 	.header-text {
 		font-size: 2.75em;
 	}
+
 }
 
 @media only screen and (min-width: 728px) and (max-width: 791px) {
 	.button-image {
-		opacity: 0.3;
+		opacity: 0.2;
 	}
+
 
 }
 
 @media only screen and (min-width: 792px) and (max-width: 853px) {
 	.button-image {
-		opacity: 0.4;
+		opacity: 0.3;
 	}
+
+
 }
+
+
 
 
 

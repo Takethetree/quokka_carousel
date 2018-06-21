@@ -6,6 +6,7 @@ body {
 	/*background: linear-gradient(to left, white, rgb(253, 236, 246), rgb(126, 186, 220));*/
 /*	background: linear-gradient(to left, white, rgb(253, 236, 246), rgb(212, 229, 243));*/
 /*	background: linear-gradient(white, rgb(212, 229, 243));*/
+	min-width: 250px;
 }
 
 /*----------Header----------*/
@@ -54,6 +55,7 @@ body {
 .carousel-list_item {
 	width: 24%;
 	height: 250px;
+/*	height: 1500%;*/
 	list-style:none;
 	display: block;
 	border: 1px solid black;
@@ -182,6 +184,75 @@ body {
 .selected {
 	background-color: rgb(234, 168, 168);
 }
+
+
+/*----------Media Queries----------*/
+
+/*Phone*/
+@media only screen and (max-width: 320px) {
+	.button-image {
+		background-image: none;
+	}
+
+	.header-text {
+		font-size: 1.75em;
+	}
+}
+
+/*Tablet (ish)*/
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+	.button-image {
+		background-image: none;
+	}
+
+	.header-text {
+		font-size: 2em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 633px) {
+	.button-image {
+		opacity: 0.05;
+	}
+
+	.header-text {
+		font-size: 2.25em;
+	}
+}
+
+@media only screen and (min-width: 634px) and (max-width: 664px) {
+	.button-image {
+		opacity: 0.1;
+	}
+
+	.header-text {
+		font-size: 2.5em;
+	}
+}
+
+@media only screen and (min-width: 665px) and (max-width: 727px) {
+	.button-image {
+		opacity: 0.2;
+	}
+
+	.header-text {
+		font-size: 2.75em;
+	}
+}
+
+@media only screen and (min-width: 728px) and (max-width: 791px) {
+	.button-image {
+		opacity: 0.3;
+	}
+
+}
+
+@media only screen and (min-width: 792px) and (max-width: 853px) {
+	.button-image {
+		opacity: 0.4;
+	}
+}
+
 
 
 

@@ -122,7 +122,7 @@ Auto-scrolling is provided by this code:
 	setInterval(function(){ scroll(1); }, 6000);
   ```
 
-This invokes the *scroll* function every 6s, with a direction argument of 1, allowing for automatic right-scrolling. An if-statement is used to disable the
+This invokes the *scroll* function every 6s, with a direction argument of 1, allowing for automatic right-scrolling. An if-statement is used to disable the auto-scroll for smaller screen sizes. 
 
 #### Swiping
 

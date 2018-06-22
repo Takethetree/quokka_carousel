@@ -8,6 +8,10 @@ mechanism is based on ideas from the following blog:
 
 https://christianheilmann.com/2015/04/08/keeping-it-simple-coding-a-carousel/
 
+Ideas for swiping functionality came from the following: 
+
+https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+
 Thanks to Pete Thomas of https://developme.training/ for additional help. 
 
 ## HTML
@@ -35,6 +39,8 @@ change which \<li> has the 'current' class using a scrolling mechanism. The scro
 right buttons, clickable dots and also has an autoscrolling function, which automatically changes the image every 6s. 
 
 A fade animation is used to mark image transitions.
+
+The page has two displays, a desktop display and mobile / tablet display. Media queries were used to transition between the desktop display (with buttons) and the mobile / tablet display (using a 'swiper' \<div>). 
 
 ## JS
 
@@ -116,13 +122,56 @@ Auto-scrolling is provided by this code:
 	setInterval(function(){ scroll(1); }, 6000);
   ```
 
-This invokes the *scroll* function every 6s, with a direction argument of 1, allowing for automatic right-scrolling. 
+This invokes the *scroll* function every 6s, with a direction argument of 1, allowing for automatic right-scrolling. An if-statement is used to disable the
 
 #### Swiping
 
-Documentation for swiper function is pending!
+Swiper functionality occurs at screen widths of 633px and below, and is based on the following code:
+
+```javascript
+
+let unify = e => {
+	return e.changedTouches ? e.changedTouches[0]:e; 
+}
+
+let initialX = null;
+
+let detectX = e => {
+	initialX = unify(e).clientX;
+}
+
+
+let move = e => {
+	if(initialX || initialX === 0) {
+		let change = unify(e).clientX - initialX;
+		let plusOrMinus = Math.sign(change);
+
+		if(plusOrMinus < 0) {
+			return scroll(-1);
+		} else if(plusOrMinus > 0) {
+			return scroll(1);
+		} else {
+			return scroll(0);
+		}
+		initialX = null;
+	}
+
+}
 
 
 
+swiper.addEventListener("mousedown", detectX, false);
+swiper.addEventListener("touchstart", detectX, false);
 
+swiper.addEventListener("mouseup", move, false);
+swiper.addEventListener("touchend", move, false);
+
+```
+This code detects a change in the x-axis position between mousedown / mouseup and touchstart / touchend events, allowing a +ve change to be registered as a right swipe, and -ve change as a left swipe. 
+
+Firstly mouse and touch events are unified in the *unify* function. 
+
+The *detectX* function then logs the initial x-axis position - using a mousedown / touchstart event - and stores it in an *initialX* variable. 
+
+The *move* function then registers the change between the *initialX* variable and the x-axis position of a mouseup / touchend event. Using Math.sign and an if/statement, the *scroll* function (see above) is then invoked with a -1 value for -ve changes in x-position (resulting in a left swipe) and a +1 value for +ve changes in x-position (resulting in a right swipe). 
 

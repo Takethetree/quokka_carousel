@@ -1,3 +1,5 @@
+
+
 (d => {
 	let container = d.querySelector(".carousel-container");
 	let items = container.querySelectorAll(".carousel-list_item");
@@ -70,4 +72,23 @@
 
 	// if 
 
+
+
+//----------Swipe Functionality----------
+
+// create a 'swiper' element that has display: none until the screen layout changes
+
+
+
+
 })(document);
+
+
+
+
+
+
+
+
+
+

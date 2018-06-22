@@ -131,7 +131,8 @@ body {
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0.5em 1em 0.5em 1em;
+/*	padding: 0.5em 1em 0.5em 1em;*/
+	padding: 0.75em 1.25em 0.75em 1.25em;
 	border: 1px solid black;
 	border-radius: .5em;
 	background-color: rgb(255, 232, 231);
@@ -186,6 +187,31 @@ body {
 	background-color: rgb(234, 168, 168);
 }
 
+/*----------Swiper----------*/
+
+.swiper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.swiper__inner {
+	position: absolute;
+	top: 320px;
+	padding: 1em 0.5em 0.5em 0.5em;
+/*	border: 1px solid black;*/
+/*	border-radius: 5em;
+	box-shadow: -4px 6px rgb(205, 205, 205);*/
+
+}
+
+.swiper--text {
+	font-family: 'Annie Use Your Telescope', cursive;
+	color: red;
+	font-size: 1.5em;
+	padding: 1em;
+}
+
 
 /*----------Media Queries----------*/
 
@@ -207,7 +233,9 @@ body {
 	}
 
 	.button {
-		top: 350px;
+/*		top: 350px;
+		padding: 0.75em 1.25em 0.75em 1.25em;*/
+		display: none;
 	}
 
 	.inner-dot-container {
@@ -234,7 +262,9 @@ body {
 	}
 
 	.button {
-		top: 350px;
+/*		top: 350px;
+		padding: 0.75em 1.25em 0.75em 1.25em;*/
+		display: none;
 	}
 
 	.inner-dot-container {
@@ -260,7 +290,9 @@ body {
 	}
 
 	.button {
-		top: 350px;
+/*		top: 350px;
+		padding: 0.75em 1.25em 0.75em 1.25em;*/
+		display: none;
 	}
 
 	.inner-dot-container {
@@ -278,6 +310,10 @@ body {
 		font-size: 2.5em;
 	}
 
+	.swiper {
+		display: none;
+	}
+
 }
 
 @media only screen and (min-width: 665px) and (max-width: 727px) {
@@ -289,6 +325,10 @@ body {
 		font-size: 2.75em;
 	}
 
+	.swiper {
+		display: none;
+	}
+
 }
 
 @media only screen and (min-width: 728px) and (max-width: 791px) {
@@ -296,6 +336,9 @@ body {
 		opacity: 0.2;
 	}
 
+	.swiper {
+		display: none;
+	}
 
 }
 
@@ -304,9 +347,17 @@ body {
 		opacity: 0.3;
 	}
 
+	.swiper {
+		display: none;
+	}
 
 }
 
+@media only screen and (min-width: 854px) {
+	.swiper {
+		display: none;
+	}
+}
 
 
 

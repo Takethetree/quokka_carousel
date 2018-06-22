@@ -118,3 +118,11 @@ Auto-scrolling is provided by this code:
 
 This invokes the *scroll* function every 6s, with a direction argument of 1, allowing for automatic right-scrolling. 
 
+#### Swiping
+
+Documentation for swiper function is pending!
+
+
+
+
+

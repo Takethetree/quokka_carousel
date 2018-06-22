@@ -43,7 +43,12 @@
 	// let automatic = () => window.setTimeout(scroll(1), 1000);
 	// automatic();
 
-	setInterval(function(){ scroll(1); }, 7000);
+	// setInterval(function(){ scroll(1); }, 7000);
+
+	if(window.innerWidth > 633) {
+		setInterval(function(){ scroll(1); }, 6000);
+	}
+
 
 	dots.forEach((dot, i) => dot.addEventListener("click", () => {
 		current.classList.remove("current");

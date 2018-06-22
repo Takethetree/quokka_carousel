@@ -82,8 +82,6 @@
 
 //----------Swipe Functionality----------
 
-// create a 'swiper' element that has display: none until the screen layout changes
-
 
 let unify = e => {
 	return e.changedTouches ? e.changedTouches[0]:e; 
@@ -95,7 +93,6 @@ let detectX = e => {
 	initialX = unify(e).clientX;
 }
 
-// let i = 0;
 
 let move = e => {
 	if(initialX || initialX === 0) {
@@ -110,18 +107,10 @@ let move = e => {
 		} else {
 			return scroll(0);
 		}
-
-		// if(plusOrMinus < 0) {
-		// 	return scroll(-1);
-		// } else if(plusOrMinus > 1) {
-		// 	return scroll(1);
-		// }
 		initialX = null;
 	}
 
 }
-
-
 
 
 
